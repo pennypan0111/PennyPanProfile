@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 .container{
   padding-left: 30px;
   padding-right: 30px;
@@ -7,6 +10,50 @@
 } 
 .secondary-default {
   color: #fac470;
+}
+
+/* ---------- Profile ----------*/
+.Profile-imgBox img{
+  width: 100%;
+}
+.Profile-title{
+  position: relative;
+  padding-left: 20px;
+  font-size: 3rem;
+}
+.Profile-title:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #295d72;
+  width: 8px;
+  height: 100%;
+}
+.Profile-introduce{
+  font-size: 1.2rem;
+}
+.readMore-btn{
+  background: #295d72;
+  border-radius: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.readMore-btn:hover{
+  color: #fac470;
+  transition: 0.3s;
+  text-decoration: none;
+}
+@media screen and (min-width:768px){
+  .Profile-title{
+    font-size: 3.2rem;
+  }
+}
+@media screen and (min-width:992px){
+  .Profile-title{
+    font-size: 3.2rem;
+  }
 }
 
 /* ---------- About Me ----------*/

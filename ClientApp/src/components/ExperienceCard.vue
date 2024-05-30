@@ -49,5 +49,6 @@ export default {
 }
 .el-timeline {
   --el-timeline-node-color: #fac470;
+  padding-left: 0;
 }
 </style>

@@ -14,6 +14,25 @@ export default {
 
 <template>
 
+  <section class="Profile" id="Profile">
+    <div class="container pt-lg-5">
+        <div class="row py-5 align-items-center">
+          <div class="col-lg-7 col-12 Profile-imgBox pt-5 px-0">
+              <img src="../assets/img/penny.jpg">
+          </div>
+          <div class="col-lg-5 col-12 pt-5">
+            <h1 class="primary-default font-weight-bold Profile-title">關於我<br/>想要應徵貴司職缺<br/>的這件事</h1>
+            <p class="Profile-introduce my-4">Hi！我是Penny，在自我探索的過程中，偶然間接觸到了程式領域，而就此踏入了程式的世界。了解前端框架同時能獨立運用前端框架完成切版作業及網頁互動效果。
+              <br/><br/>如果目前為止有符合您尋才的基本需求，事不宜遲快點擊了解更多來認識我吧！
+            </p>
+            <div class="text-center text-lg-left">
+              <a href="#AboutMe" class="readMore-btn px-3 py-2">了解更多</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
   <section class="AboutMe" id="AboutMe">
     <div class="container pb-5">
       <SectionTitle title="About Me" color="secondary-default"></SectionTitle>
