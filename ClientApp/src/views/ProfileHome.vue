@@ -1,16 +1,50 @@
 <script>
 import SectionTitle from '../components/SectionTitle.vue'
 import PortfolioCard from '../components/PortfolioCard.vue'
+import ExperienceCard from '../components/ExperienceCard.vue'
 
 export default {
   components: {
     SectionTitle,
-    PortfolioCard
+    PortfolioCard,
+    ExperienceCard
   }
 }
 </script>
 
 <template>
+
+  <section class="Experience" id="Experience">
+    <SectionTitle title="Experience" color="primary-default"></SectionTitle>
+
+    <el-timeline class="pb-5">
+      <ExperienceCard
+        time="2022/11 - 至今"
+        title="動力安全資訊股分有限公司｜UIUX設計師、前端工程師"
+        content="負責內部系統介面視覺優化，同時將其中使用的元件樣式制定成規範並建立成文件庫，以便加速其他專案的開發和模板化。此外，期間靠著網路資源從0到1自學Vue.js前端框架、第三方套件運用、API串接以及基礎的.Net Core Web API 建置，將公司內部原有的專案透過新學的技術進行改寫。"
+      />
+      <ExperienceCard
+        time="2022/05 - 2022/10 (資歷5個月)"
+        title="資展國際(原資策會)｜互動式網站UI/UX設計師就業養成班"
+        content="考量目前社會趨勢逐漸傾向於網路發展，經多方搜索資料後，主動報名參加資展國際開設的「互動式網站UI/UX設計師就業養成班」，做為期約半年的網頁設計培訓，學習過程中有與團隊合作一同開發網頁的實際協作經歷，也有獨立完成個人專案的經驗與能力。"
+      />
+      <ExperienceCard
+        time="2018/11 - 2022/05 (資歷3年6個月)"
+        title="富信大飯店股份有限公司｜設計專員"
+        content="在擔任設計專員期間，主要負責製作活動專案平面文宣(海報、DM...等)，印刷物輸出發包，以及針對季節新品進行商品拍攝。並曾於同期間兼任行銷職務，將以往所學相關行銷知識與設計技能結合應用。"
+      />
+      <ExperienceCard
+        time="2017/06 - 2018/10 (資歷1年4個月)"
+        title="金田餐飲股份有限公司｜行銷專員"
+        content="主要負責代理國外餐飲品牌管理，並擔任門市與進駐百貨之接洽窗口，從中學習到了專案時程的規劃，以及對外應變的溝通能力。"
+      />
+      <ExperienceCard
+        time="2016/07 - 2017/06 (資歷11個月)"
+        title="喜鴻旅行社｜行銷專員"
+        content="剛進職場的第一份工作，主要發想規劃官網網頁活動企劃，並與設計部門協同製作出活動網頁，同時負責社群軟體經營、廣告投放，以及內部專案新人教育訓練講師。"
+      />
+    </el-timeline>
+  </section>
 
   <section class="Portfolio" id="Portfolio">
     <SectionTitle title="Portfolio" color="primary-default"></SectionTitle>
