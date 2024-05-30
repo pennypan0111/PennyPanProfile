@@ -8,3 +8,28 @@
 .secondary-default {
   color: #fac470;
 }
+
+/* ---------- About Me ----------*/
+.AboutMe {
+  height: auto;
+  background: #295d72;
+}
+.aboutMe-content{
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+@media screen and (min-width:768px){
+  .aboutMe-content{
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width:992px){
+  .aboutMe-content{
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+}
