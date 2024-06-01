@@ -1,7 +1,14 @@
 <script>
+import HeaderTop from './components/HeaderTop.vue'
 
+export default {
+  components: {
+    HeaderTop
+  }
+}
 </script>
 
 <template>
-    <RouterView />
+  <HeaderTop></HeaderTop>
+  <RouterView />
 </template>
