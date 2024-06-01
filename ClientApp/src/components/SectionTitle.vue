@@ -3,7 +3,7 @@ export default {
   props: {
     title: {
       type: String,
-      requires: true,
+      required: true,
       default: 'title'
     },
     color: {

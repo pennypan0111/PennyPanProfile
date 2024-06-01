@@ -229,9 +229,71 @@ html{
   }
 }
 
+/* ---------- dialog ----------*/
+.el-dialog{
+  --el-dialog-width: 90%;
+}
+.dialog-photo-box{
+  width: 100%;
+  height: 100%;
+
+}
+.dialog-photo-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.dialog-content-text{
+  font-size: 1.2rem;
+}
+
+.portfolio-video-box{
+  width: 100%;
+  height: 315px;
+  margin: auto;
+}
+.portfolio-video-box iframe{
+  width: 100%;
+  height: 100%;
+}
+.portfolio-swiper-dots .swiper-pagination-bullet-active{
+  background: #295d72;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: #295d72;
+}
+.portfolio-swiper-dots .swiper-horizontal > .portfolio-swiper-dots .swiper-pagination-bullets, .portfolio-swiper-dots .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: var(--swiper-pagination-bottom, -3px);
+}
+@media screen and (min-width:768px){
+  .portfolio-video-box{
+    width: 100%;
+    height: 315px;
+  }
+}
+@media screen and (min-width:992px){
+  .el-dialog{
+    --el-dialog-width: 55%;
+  }
+  .portfolio-video-box{
+    width: 100%;
+    height: 600px;
+    margin: auto;
+  }
+}
+
 /* ---------- Footer ----------*/
 .Footer{
   padding: 10px 0;
   background: #295d72;
   color: #ffffff;
+}
+
+/* ---------- backToTop ----------*/
+.el-backtop{
+  --el-backtop-bg-color: #fac470;
+  --el-backtop-text-color: #ffffff;
+}
+.el-backtop:hover {
+  background-color: #fac470;
 }

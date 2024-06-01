@@ -15,7 +15,9 @@ export default {
       artDesign: ['Figma', 'Illustrator', 'Photoshop', 'Premiere'],
       gitFlow: ['GitHub', 'Git', 'Azure DevOps'],
       officeSoftware: ['Word', 'PowerPoint', 'Excel'],
-      automationTools: ['CI Pipeline', 'CD Pipeline', 'Cypress']
+      automationTools: ['CI Pipeline', 'CD Pipeline', 'Cypress'],
+      dialogVisible_design: false,
+      dialogVisible_video: false
     }
   },
   mounted() {
@@ -27,6 +29,12 @@ export default {
   methods: {
     updateScreenWidth() {
       this.screenWidth = window.innerWidth
+    },
+    dialog_show() {
+      this.dialogVisible_design = !this.dialogVisible_design
+    },
+    dialog_show2() {
+      this.dialogVisible_video = !this.dialogVisible_video
     }
   },
   components: {
@@ -201,16 +209,101 @@ export default {
           category="Photoshop、Illustrator"
           title="平面設計"
           introduce="使用 Adobe Photoshop、Illustrator 製作平面文宣、社群廣告圖、大型輸出物及相關印刷品輸出發包等作品"
+          :handleClick="dialog_show"
         />
         <PortfolioCard
           srcImg="../src/assets/img/about_video.jpg"
           category="Premiere "
           title="影片後製剪輯"
           introduce="自行接案，負責 Youtuber、公司或企業相關的影片後期製作和剪輯等需求作品"
+          :handleClick="dialog_show2"
         />
       </div>
     </div>
   </section>
+
+  <el-dialog v-model="dialogVisible_design" >
+    <swiper
+      :slides-per-view="1"
+      :space-between="50"
+      :navigation="true"
+      :pagination="true"
+      :modules="modules"
+      class="portfolio-swiper-dots"
+    >
+
+      <swiper-slide>
+        <div class="dialog-photo-box">
+          <img src="../assets/img/mockup_DM.jpg">
+        </div>
+        <div class="text-center dialog-content-text primary-default font-weight-bold mt-2">《 活動宣傳DM設計 》</div>
+        <p class="text-justify dialog-content-text">配合客戶需求擬定合適的主題風格與版面構圖，並將重要資訊及說明細項以層次分明的方式融入到畫面中，在講求完美的視覺呈現下同時達到宣傳DM傳遞資訊的目的。</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="dialog-photo-box">
+          <img src="../assets/img/mockup_FBAD.jpg">
+        </div>
+        <div class="text-center dialog-content-text primary-default font-weight-bold mt-2">《 社群圖文設計 》</div>
+        <p class="text-justify dialog-content-text">考量在有限的版面空間，以及一般使用者對於廣告貼文瀏覽停留的駐足時間，設計能夠在短時間內有效地抓住使用者目光的視覺畫面，以提升廣告圖文的宣傳流量及廣告轉換效益。</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="dialog-photo-box">
+          <img src="../assets/img/mockup_Logo.jpg">
+        </div>
+        <div class="text-center dialog-content-text primary-default font-weight-bold mt-2">《 Logo設計 》</div>
+        <p class="text-justify dialog-content-text">「InDock 莫水文創」是一間行銷公司，將Ink(墨水)與Dock(碼頭)做結合，期許每個行銷點子都能透過一瓶瓶的墨水表達出去，而碼頭則是一個中轉站，存放著各式各樣的靈感與點子，等待需求後一一配送出去。設計上將英文開頭的i與D做結合，形成一艘帆船乘風破浪的意象，象徵每個行銷點子都能順風散播出去。</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="dialog-photo-box">
+          <img src="../assets/img/mockup_outdoor.jpg">
+        </div>
+        <div class="text-center dialog-content-text primary-default font-weight-bold mt-2">《 大圖輸出設計 》</div>
+        <p class="text-justify dialog-content-text">擁有大型輸出設計經驗，能夠獨立完成從尺寸規格的確定、內容設計、與印刷廠商的洽談和價格協商，一直到成品驗收的全流程工作。</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="dialog-photo-box">
+          <img src="../assets/img/mockup_output.jpg">
+        </div>
+        <div class="text-center dialog-content-text primary-default font-weight-bold mt-2">《 印刷物品設計 》</div>
+        <div class="text-justify dialog-content-text">了解印刷相關的知識，從產品設計、模擬打樣到商品驗收，擁有充分的能力與經驗應付各種印刷項目的需求。</div>
+      </swiper-slide>
+
+    </swiper>
+  </el-dialog>
+
+  <el-dialog v-model="dialogVisible_video">
+    <swiper
+        :slides-per-view="1"
+        :space-between="50"
+        :navigation="true"
+        :pagination="true"
+        :modules="modules"
+        class="portfolio-swiper-dots"
+    >
+      <swiper-slide>
+        <div class="portfolio-video-box">
+            <iframe src="https://www.youtube.com/embed/Oah4tH5ua58?si=6T1LzpDJ6cOEqKOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="text-center dialog-content-text primary-default font-weight-bold mt-2">【網紅youtuber】撒醬x日初Sachiko's FirstDay x 金子半之助</div>
+        <p class="text-justify dialog-content-text">台日混血Youtuber網紅與「日本第一職人天丼：金子半之助」合作的宣傳影片，在此影片中負責其特效字卡及音效搭配等後製作業。</p>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="portfolio-video-box">
+            <iframe src="https://www.youtube.com/embed/orvS2KGBhQY?si=daXIxocBaFwYlXdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="text-center dialog-content-text primary-default font-weight-bold mt-2">【公司企業】東稻家居-地理位置&產品介紹</div>
+        <p class="text-justify dialog-content-text">將收到的影片素材和腳本，獨立完成從無到有的剪輯工作，並為影片增添特效字卡、背景音樂、運鏡特效及字幕等後期製作工作，將影片更增添其完整性。</p>
+      </swiper-slide>
+
+    </swiper>
+  </el-dialog>
+
+  <el-backtop right="40" bottom="60" />
 
   <footer class="Footer text-center mt-5">Copyright © 2024 Pan-Li-Ting. All rights reserved.</footer>
 

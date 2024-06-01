@@ -21,6 +21,9 @@ export default {
     },
     srcImg: {
       type: String
+    },
+    handleClick: {
+      type: Function
     }
   }
 }
@@ -38,7 +41,7 @@ export default {
         <p class="title_text">{{ title }}</p>
         <span class="introduce_text">{{ introduce }}</span>
         <div>
-          <a :href="hrefButton" target="_blank" class="lookup-button">查看</a>
+          <a :href="hrefButton" target="_blank" class="lookup-button" @click="handleClick">查看</a>
         </div>
       </div>
     </el-card>
@@ -71,6 +74,7 @@ export default {
   color: #ffffff;
   border-radius: 30px;
   padding: 4px 30px;
+  cursor: pointer;
 }
 .lookup-button:not(.is-disabled):focus, .lookup-button:not(.is-disabled):hover{
   background: #295d72;

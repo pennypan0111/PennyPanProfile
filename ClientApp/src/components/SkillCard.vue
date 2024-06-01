@@ -7,7 +7,7 @@ export default {
     },
     skills: {
       type: Array,
-      requred: true
+      required: true
     },
     circleStyle: {
       type: String
