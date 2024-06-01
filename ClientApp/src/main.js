@@ -1,3 +1,6 @@
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/swiper-bundle.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'element-plus/dist/index.css'
 import './assets/main.css'

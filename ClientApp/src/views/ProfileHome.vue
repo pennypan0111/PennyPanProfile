@@ -2,12 +2,40 @@
 import SectionTitle from '../components/SectionTitle.vue'
 import PortfolioCard from '../components/PortfolioCard.vue'
 import ExperienceCard from '../components/ExperienceCard.vue'
+import SkillCard from '../components/SkillCard.vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination, Navigation } from 'swiper/modules'
 
 export default {
+  data() {
+    return {
+      modules: [Pagination, Navigation],
+      screenWidth: window.innerWidth,
+      frontEnd: ['Vue.js', 'HTML', 'CSS', 'Jquery', 'Javascript'],
+      artDesign: ['Figma', 'Illustrator', 'Photoshop', 'Premiere'],
+      gitFlow: ['GitHub', 'Git', 'Azure DevOps'],
+      officeSoftware: ['Word', 'PowerPoint', 'Excel'],
+      automationTools: ['CI Pipeline', 'CD Pipeline', 'Cypress']
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.updateScreenWidth)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.updateScreenWidth)
+  },
+  methods: {
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth
+    }
+  },
   components: {
     SectionTitle,
     PortfolioCard,
-    ExperienceCard
+    ExperienceCard,
+    SkillCard,
+    Swiper,
+    SwiperSlide
   }
 }
 </script>
@@ -17,12 +45,12 @@ export default {
   <section class="Profile" id="Profile">
     <div class="container pt-lg-5">
         <div class="row py-5 align-items-center">
-          <div class="col-lg-7 col-12 Profile-imgBox pt-5 px-0">
+          <div class="col-lg-7 col-12 profile-imgBox pt-5 px-0">
               <img src="../assets/img/penny.jpg">
           </div>
           <div class="col-lg-5 col-12 pt-5">
-            <h1 class="primary-default font-weight-bold Profile-title">關於我<br/>想要應徵貴司職缺<br/>的這件事</h1>
-            <p class="Profile-introduce my-4">Hi！我是Penny，在自我探索的過程中，偶然間接觸到了程式領域，而就此踏入了程式的世界。了解前端框架同時能獨立運用前端框架完成切版作業及網頁互動效果。
+            <h1 class="primary-default font-weight-bold profile-title">關於我<br/>想要應徵貴司職缺<br/>的這件事</h1>
+            <p class="profile-introduce my-4">Hi！我是Penny，在自我探索的過程中，偶然間接觸到了程式領域，而就此踏入了程式的世界。了解前端框架同時能獨立運用前端框架完成切版作業及網頁互動效果。
               <br/><br/>如果目前為止有符合您尋才的基本需求，事不宜遲快點擊了解更多來認識我吧！
             </p>
             <div class="text-center text-lg-left">
@@ -47,6 +75,7 @@ export default {
   <section class="Experience" id="Experience">
     <div class="container">
       <SectionTitle title="Experience" color="primary-default"></SectionTitle>
+
       <el-timeline class="pb-5">
         <ExperienceCard
           time="2022/11 - 至今"
@@ -77,9 +106,46 @@ export default {
     </div>
   </section>
 
+  <section class="Skills" id="Skills">
+    <div class="container">
+      <SectionTitle title="Skills" color="secondary-default"></SectionTitle>
+
+      <swiper
+        :slidesPerView="screenWidth >= 1200 ? 5 : (screenWidth >= 992 ? 4 : (screenWidth >= 768 ? 3 : 2))"
+        :spaceBetween="30"
+        :modules="modules"
+        :pagination="{clickable: true,}"
+        class="my-swiper pb-5"
+      >
+
+        <swiper-slide>
+          <SkillCard title="前端</br>技術" :skills="frontEnd" circleStyle="skill-fill"></SkillCard>
+        </swiper-slide>
+
+        <swiper-slide>
+          <SkillCard title="版本</br>控制" :skills="gitFlow" circleStyle="skill-line"></SkillCard>
+        </swiper-slide>
+
+        <swiper-slide>
+          <SkillCard title="自動化<br/>工具" :skills="automationTools" circleStyle="skill-fill"></SkillCard>
+        </swiper-slide>
+
+        <swiper-slide>
+          <SkillCard title="設計</br>軟體" :skills="artDesign" circleStyle="skill-line"></SkillCard>
+        </swiper-slide>
+
+        <swiper-slide>
+          <SkillCard title="辦公</br>軟體" :skills="officeSoftware" circleStyle="skill-fill"></SkillCard>
+        </swiper-slide>
+
+      </swiper>
+    </div>
+  </section>
+
   <section class="Portfolio" id="Portfolio">
     <div class="container">
       <SectionTitle title="Portfolio" color="primary-default"></SectionTitle>
+
       <div class="row">
         <PortfolioCard
           srcImg="../src/assets/img/pixelGame.jpg"
@@ -94,54 +160,54 @@ export default {
           title="Play One。陪玩"
           introduce="大量運用 CSS Animation 動畫效果，為Switch遊戲的介紹頁面創造出生動的視覺效果，並有效地展示遊戲的特色和亮點"
           hrefButton="https://pennypan0111.github.io/gm/"
-          />
+        />
         <PortfolioCard
           srcImg="../src/assets/img/ExchangeRate.jpg"
           category="Static Page with RWD"
           title="Exchange Rate。幣值轉換"
           introduce="使用 vue axios 套件，串接即時匯率的 Open API ，設定自行輸入台幣金額，可即時轉換對應的日圓及美金"
           hrefButton="https://pennypan0111.github.io/vueExchangeRate/"
-          />
+        />
         <PortfolioCard
           srcImg="../src/assets/img/ToDoList.jpg"
           category="Static Page with RWD"
           title="To Do List。代辦清單"
           introduce="利用 Vue.js 的 Options API 寫法，建立簡單的待辦事項清單，並可執行新增、刪除、更新等操作"
           hrefButton="https://pennypan0111.github.io/vueToDoList/"
-          />
+        />
         <PortfolioCard
           srcImg="../src/assets/img/Juice.jpg"
           category="Figma Prototype & Component"
           title="Juice。果汁"
           introduce="自行構思獨具特色的品牌主題和風格，並透過原型設計的模擬，生動地展示品牌官方網站的實際運作畫面"
           hrefButton="https://www.figma.com/proto/DcpAyPWL1LlkZq48xhsiNa/Juice%E3%80%82%E6%9E%9C%E6%B1%81?page-id=0%3A1&type=design&node-id=1-3&viewport=755%2C414%2C0.19&t=AYNmdkgKJ5fMskN6-1&scaling=scale-down&starting-point-node-id=1%3A3&mode=design"
-          />
+        />
         <PortfolioCard
           srcImg="../src/assets/img/Lucky_Roulette.jpg"
           category="Figma Prototype & Component"
           title="Lucky Roulette。幸運輪盤"
           introduce="透過精心構建的原型互動設計，逼真地模擬出完整的網頁抽獎流程，以達到事先洞察可能情境，確保開發後能呈現順暢的抽獎體驗"
           hrefButton="https://www.figma.com/proto/QHDyZ7v5DxX9WdNFfhvRyh/Lucky-Roulette%E3%80%82%E5%B9%B8%E9%81%8B%E8%BC%AA%E7%9B%A4?page-id=0%3A1&node-id=339-9&starting-point-node-id=339%3A9&scaling=scale-down&mode=design&t=FVX1CXAiIeUE2iBM-1"
-          />
+        />
         <PortfolioCard
           srcImg="../src/assets/img/wedding_story.jpg"
           category="Figma Prototype & Component"
           title="Wedding Story。幸福物語"
           introduce="善用 Component 功能，將重複性高的內容製作成 Component ，以確保整體內容的一致性，及提高設計效率"
           hrefButton="https://www.figma.com/file/ggN15aKgkrnINy7sRJV0ed/shopping-App?type=design&node-id=0%3A1&mode=design&t=99LKG858SuYtfxlh-1"
-          />
+        />
         <PortfolioCard
           srcImg="../src/assets/img/about_design.jpg"
           category="Photoshop、Illustrator"
           title="平面設計"
           introduce="使用 Adobe Photoshop、Illustrator 製作平面文宣、社群廣告圖、大型輸出物及相關印刷品輸出發包等作品"
-          />
+        />
         <PortfolioCard
           srcImg="../src/assets/img/about_video.jpg"
           category="Premiere "
           title="影片後製剪輯"
           introduce="自行接案，負責 Youtuber、公司或企業相關的影片後期製作和剪輯等需求作品"
-          />
+        />
       </div>
     </div>
   </section>
