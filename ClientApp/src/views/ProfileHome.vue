@@ -212,4 +212,6 @@ export default {
     </div>
   </section>
 
+  <footer class="Footer text-center mt-5">Copyright © 2024 Pan-Li-Ting. All rights reserved.</footer>
+
 </template>

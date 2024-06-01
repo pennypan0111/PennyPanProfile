@@ -228,3 +228,10 @@ html{
     cursor: default;
   }
 }
+
+/* ---------- Footer ----------*/
+.Footer{
+  padding: 10px 0;
+  background: #295d72;
+  color: #ffffff;
+}
