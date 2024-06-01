@@ -31,7 +31,7 @@ jobs:
 
       - name: deploy
         run: |
-          cd clientApp
+          cd ClientApp
           npm install
           npm run build
           npm run deploy
