@@ -303,8 +303,6 @@ export default {
     </swiper>
   </el-dialog>
 
-  <el-backtop right="40" bottom="60" />
-
   <footer class="Footer text-center mt-5">Copyright © 2024 Pan-Li-Ting. All rights reserved.</footer>
 
 </template>
