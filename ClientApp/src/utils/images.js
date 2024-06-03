@@ -2,7 +2,7 @@ import pixelGameImg from '@/assets/img/pixel_game.jpg'
 import playOneImg from '@/assets/img/play_one.jpg'
 import toDoListImg from '@/assets/img/to_do_list.jpg'
 import exchangeRateImg from '@/assets/img/exchange_rate.jpg'
-import juiceImg from '@/assets/img/juice.jpg'
+import juiceJuiceImg from '@/assets/img/juiceJuice.jpg'
 import luckyRouletteImg from '@/assets/img/lucky_roulette.jpg'
 import weddingStoryImg from '@/assets/img/wedding_story.jpg'
 import aboutDesignImg from '@/assets/img/about_design.jpg'
@@ -13,7 +13,7 @@ export default {
   playOne: playOneImg,
   toDoList: toDoListImg,
   exchangeRate: exchangeRateImg,
-  juice: juiceImg,
+  juiceJuice: juiceJuiceImg,
   luckyRoulette: luckyRouletteImg,
   weddingStory: weddingStoryImg,
   aboutDesign: aboutDesignImg,
