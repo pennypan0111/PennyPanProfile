@@ -156,7 +156,7 @@ export default {
 
       <div class="row">
         <PortfolioCard
-          srcImg="./src/assets/img/pixelGame.jpg"
+          srcImg="@/assets/img/pixelGame.jpg"
           category="Static Page"
           title="Space Inyaders。太空侵略者"
           introduce="設計以復古像素風格為主的UI界面，結合 JavaScript 編寫遊戲互動，打造經典射擊遊戲體驗"
