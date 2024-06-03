@@ -186,7 +186,7 @@ export default {
           hrefButton="https://pennypan0111.github.io/vueToDoList/"
         />
         <PortfolioCard
-          :srcImg="images.juice"
+          :srcImg="images.juiceJuice"
           category="Figma Prototype & Component"
           title="Juice。果汁"
           introduce="自行構思獨具特色的品牌主題和風格，並透過原型設計的模擬，生動地展示品牌官方網站的實際運作畫面"
