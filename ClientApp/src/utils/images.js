@@ -1,12 +1,12 @@
-import pixelGameImg from '@/assets/img/pixel_game.jpg'
-import playOneImg from '@/assets/img/play_one.jpg'
-import toDoListImg from '@/assets/img/to_do_list.jpg'
-import exchangeRateImg from '@/assets/img/exchange_rate.jpg'
-import juiceJuiceImg from '@/assets/img/juice_juice.jpg'
-import luckyRouletteImg from '@/assets/img/lucky_roulette.jpg'
-import weddingStoryImg from '@/assets/img/wedding_story.jpg'
-import aboutDesignImg from '@/assets/img/about_design.jpg'
-import aboutVideoImg from '@/assets/img/about_video.jpg'
+import pixelGameImg from '@/assets/img/pixelGame.jpg'
+import playOneImg from '@/assets/img/playOne.jpg'
+import toDoListImg from '@/assets/img/toDoList.jpg'
+import exchangeRateImg from '@/assets/img/exchangeRate.jpg'
+import juiceJuiceImg from '@/assets/img/juiceJuice.jpg'
+import luckyRouletteImg from '@/assets/img/luckyRoulette.jpg'
+import weddingStoryImg from '@/assets/img/weddingStory.jpg'
+import aboutDesignImg from '@/assets/img/aboutDesign.jpg'
+import aboutVideoImg from '@/assets/img/aboutVideo.jpg'
 
 export default {
   pixelGame: pixelGameImg,
