@@ -13,10 +13,10 @@ export default {
       modules: [Pagination, Navigation],
       screenWidth: window.innerWidth,
       frontEnd: ['Vue.js', 'HTML', 'CSS', 'Jquery', 'Javascript'],
-      artDesign: ['Figma', 'Illustrator', 'Photoshop', 'Premiere'],
+      artDesign: ['Figma', 'Illustrator', 'Photoshop'],
       gitFlow: ['GitHub', 'Git', 'Azure DevOps'],
       officeSoftware: ['Word', 'PowerPoint', 'Excel'],
-      automationTools: ['CI Pipeline', 'CD Pipeline', 'Cypress'],
+      automationTools: ['CI/CD Pipeline'],
       dialogVisible_design: false,
       dialogVisible_video: false,
       images: imagesUrl
