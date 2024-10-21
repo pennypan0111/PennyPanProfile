@@ -183,7 +183,7 @@ export default {
           category="Static Page with RWD"
           title="To Do List。代辦清單"
           introduce="利用 Vue.js 的 Options API 寫法，建立簡單的待辦事項清單，並可執行新增、刪除、更新等操作"
-          hrefButton="https://pennypan0111.github.io/vueToDoList/"
+          hrefButton="https://pennypan0111.github.io/toDoList/"
         />
         <PortfolioCard
           :srcImg="images.juiceJuice"
